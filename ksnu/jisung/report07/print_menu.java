@@ -6,9 +6,11 @@ public class print_menu {
     UniverManagement uManagement = new UniverManagement();
     printAll PrintAll = new printAll();
     searchUniDB sDb = new searchUniDB();
+    changeDB Change = new changeDB();
+    deleteDB delDB = new deleteDB();
     public void menu(){
-        
-        while(true){
+        int keep = 0;
+        while(keep == 0){
             System.out.println("<대학DB관리 프로그램>\n1.대학 구성원 데이터 입력\n2.대학 구성원 데이터 전체 출력\n3.대학 구성원 데이터 조건 검색\n4.대학 구성원 데이터 변경\n5.대학 구성원 데이터 삭제\n0.메인 메뉴로 돌아가기");
             int num = scan.nextInt();
             switch(num){
@@ -19,11 +21,11 @@ public class print_menu {
                     break;
                 case 3:sDb.search(persons);
                     break;
-                case 4: 
+                case 4: Change.changing(persons);
                     break;
-                case 5:
+                case 5:delDB.delete(persons);
                     break;
-                case 0:
+                case 0: keep++;
                     break;                    
             }
         }

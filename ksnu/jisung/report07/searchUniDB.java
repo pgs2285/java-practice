@@ -9,7 +9,7 @@ public class searchUniDB {
         System.out.println("1.사람 이름으로 검색 2. 나이로 검색");
         int number = umManagement.inputNum();
         switch(number){
-            case 1: System.out.print("이름으로 검색");
+            case 1: System.out.print("이름으로 검색:");
                 String name = scan.next(); searchByName(persons, name);
                 break;
             case 2:System.out.print("기준:2021년 나이로 검색(최소나이 최대나이):");

@@ -1,7 +1,7 @@
 package ksnu.jisung.report07;
 
 class Person {
-    int citizenNumber;
+    String citizenNumber;
     String name;
     int birthyear;
     int classify;
